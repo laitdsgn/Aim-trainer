@@ -1,0 +1,127 @@
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+@keyframes circleAppear {
+    0% {transform: scale(0.1);}
+    50% {transform: scale(1);}
+    100% {
+        transform: scale(0);
+        display: none;
+        }
+}
+
+@keyframes textSpacing {
+    0% {letter-spacing: 0px;}
+    100% {letter-spacing: 4px;}
+}
+
+:root {
+    --grey: #252525;
+    --darker-grey:#1d1d1d;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    color: var(--darker-grey);
+    animation: textSpacing 2s alternate infinite ;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: url(res/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Cascadia Code', sans-serif;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.window {
+    background-color: #ffffff;
+    width: 1200px;
+    height: 700px;
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    cursor: crosshair;
+
+}
+
+
+
+.window #window-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--grey);
+    border-radius: 7px 7px 0px 0px;
+    color: #ffffff;
+}
+
+
+
+#start {
+    padding: 5px 30px 5px 30px;
+    border-radius: 6px;
+
+}
+
+.window #window-info p {
+    transform: translateY(8px);
+}
+
+
+.container-fluid footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0px 5px 10px;
+    color: #ffffff;
+    background-color: var(--grey);
+}
+
+#high-seas {
+    width: 100px;
+    transform: translateY(-3px);
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px #1d1d1d88;
+    transform: scale(0);
+}
+
+.finish {
+    font-size: 20px;
+    position: relative;
+    top: 150px;
+    display: none;
+}
+
+#block {
+    z-index: 100;
+    position: relative;
+    left: -2%;
+    width: 1250px;
+    height: 650px;
+}
+
+
+#FINISH {
+    font-size: 25px;
+}
+
