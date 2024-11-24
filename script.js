@@ -159,12 +159,9 @@ function speedRandomCircles() {
     
         if (circlesIntervalValue > 650) {
             circlesIntervalValue -= 10 ;
-            console.log(circlesIntervalValue);
             clearInterval(circlesInterval);
             circlesInterval = setInterval(randomCircles, circlesIntervalValue);
         }
 
 
     }
-
-    
